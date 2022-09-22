@@ -12,6 +12,7 @@ public class LinerSearch {
 		}
 		System.out.println("ENTER KEY: ");
 		int key = sc.nextInt();
+        sc.close();
 		boolean found = Search(arr, key);
         if (found == true) {
             System.out.println("ELEMENT FOUND...");

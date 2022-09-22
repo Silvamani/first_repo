@@ -10,6 +10,7 @@ public class LinearStringSearch {
 		for (int i = 0; i < str.length; i++) {
 			str[i] = sc.nextLine();
 		}
+		sc.close();
 		System.out.println("ENTER KEY: ");
 		String key = sc.nextLine();
 		int x = 0;
