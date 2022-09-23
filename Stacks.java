@@ -17,6 +17,11 @@ class Stack{
             System.out.print(n+" ");
         }
     }
+    public int top() {
+        top--;
+        int data = Stack[top];
+        return data;
+    }
 }
 public class Stacks {
     public static void main(String[] args) {
@@ -29,6 +34,7 @@ public class Stacks {
         nums.push(30);
         nums.push(35);
         System.out.println(nums.pop());
+        System.out.println(nums.top());
         nums.show();
     }    
 }
