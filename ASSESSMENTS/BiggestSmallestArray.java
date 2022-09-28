@@ -1,3 +1,4 @@
+package ASSESSMENTS;
 public class BiggestSmallestArray {
     public static void main(String[] args) {
         int[] arr = {7,5,8,9,10,34,15};
