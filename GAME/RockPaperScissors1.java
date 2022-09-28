@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class RockPaperScissors1 {
     static class game{
+		static int userWin = 0;
+		static int machineWin = 0;
 		public static void winner(String machine) {
 			Scanner sc = new Scanner(System.in);
 			System.out.print("ENTER YOUR OPTION: ");
@@ -24,20 +26,26 @@ public class RockPaperScissors1 {
 				}else if(userinput.equalsIgnoreCase("rock")) {
 					if(machine.equalsIgnoreCase("paper")) {
 						System.out.println("YOU LOSE...!");
+						machineWin++;
 					}else if(machine.equalsIgnoreCase("scissors")) {
 						System.out.println("YOU WIN...!");
+						userWin++;
 					}
 				}else if(userinput.equalsIgnoreCase("paper")) {
 					if(machine.equalsIgnoreCase("scissors")) {
 						System.out.println("YOU LOSE...!");
+						machineWin++;
 					}else if(machine.equalsIgnoreCase("rock")) {
 						System.out.println("YOU WIN...!");
+						userWin++;
 					}
 				}else if(userinput.equalsIgnoreCase("scissors")) {
 					if(machine.equalsIgnoreCase("paper")) {
 						System.out.println("YOU WIN...!");
+						userWin++;
 					}else if(machine.equalsIgnoreCase("rock")) {
 						System.out.println("YOU LOSE...!");
+						machineWin++;
 					}
 				}
 				System.out.println("PLAY AGAIN yes/no");
@@ -55,6 +63,11 @@ public class RockPaperScissors1 {
 			String[] str = {"rock","paper","scissors"};
 			String machine = str[new Random().nextInt(str.length)];
 			game.winner(machine);
+			if (userWin > machineWin) {
+				System.out.println("YOU SCORE: "+ userWin + " YOU WON...!");
+			} else {
+				System.out.println("MACHINE SCORE: "+ machineWin + " MACHINE WON...!");
+			}
 		}
 	}
 }
